@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Meta Tags -->
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+  <!-- Page Title -->
+  <title> 你爱养宠物嘛?</title>
+  <!-- Bundle -->
+  <link rel="stylesheet" href="static/css/bundle.min.css">
+  <!-- Plugin Css -->
+  <link href="static/css/LineIcons.min.css" rel="stylesheet">
+  <link href="static/css/jquery.fancybox.min.css" rel="stylesheet">
+  <link href="static/css/owl.carousel.min.css" rel="stylesheet">
+  <link href="static/css/wow.css" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/cubeportfolio.min.css">
+  <link href="static/css/line-awesome.min.css" rel="stylesheet">
+  <!-- Style Sheet -->
+  <link href="static/css/style.css" rel="stylesheet">
+  <link href="https://wqq-sjksh.github.io/static/css/custom.css" rel="stylesheet">
+  <!-- JavaScript -->
+  <script src="static/js/bundle.min.js"></script>
+  <!-- Plugin Js -->
+  <script src="static/js/jquery.appear.js"></script>
+  <script src="static/js/jquery.fancybox.min.js"></script>
+  <script src="static/js/owl.carousel.min.js"></script>
+  <script src="static/js/wow.min.js"></script>
+  <script src="static/js/jquery.cubeportfolio.min.js"></script>
+  <!-- CUSTOM JS -->
+  <script src="static/js/contact_us.js"></script>
+  <script src="static/js/script.js"></script>
+  <!-- ECHARTS JS -->
+  <script src="static/js/echarts.min.js"></script>
+  <script src="static/js/purple-passion.js"></script>
+  <script src="static/js/vintage.js"></script>
+  <script src="static/js/jquery.js"></script>
+</head>
+<style>
+  body{
+      background-color: rgb(241, 240, 199);
+  }
+</style>
+<!-- Start 头部 -->
+<header>
+  <!--Navigation（导航）-->
+  <nav class="navbar navbar-top-default navbar-expand-lg navbar-simple nav-line">
+    <a href="javascript:void(0)" class="sidemenu_btn" id="sidemenu_toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </a>
+    <div class="container-fluid">
+      <!--Nav Links(导航链接)-->
+      <div class="collapse navbar-collapse " id="megaone">
+        <div class="navbar-nav mr-auto">
+          <a class="nav-link scroll" href="index.html">首页</a>
+          <a class="nav-link scroll" href="第2部分.html">市场规模</a>
+          <a class="nav-link scroll" href="">宠物类型</a>
+          <a class="nav-link scroll" href="第4部分.html">宠物占比</a>
+          <a class="nav-link scroll" href="第5部分.html">养宠人士</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<!-- End 头部 -->
+
+<!-- Start 第3部分 -->
+<section id="第3部分">
+  <h1 style="font-size:20px;font-style:oblique;color:rgb(51, 136, 48);position: absolute;left: 50px;top:100px">宠物类型以犬猫为主，类型多样化 犬系占比达七成，
+    猫系占比过半，多类饲养成趋势
+    参考同下</h1>
+  <div id="main" style="height:500px;position: relative;top:90px"></div>
+  <div style="display: flex;justify-content: space-around;">
+    <img style="width: 250px;height:auto" src="./static/image/狗狗1.png" alt="">
+    <img style="width: 150px;height:auto" src="./static/image/猫猫1.png" alt="">
+  </div>
+  <script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('main'), ('macarons'));
+    var option
+    option = {
+      legend: {
+        top: 'bottom'
+      },
+      title: {
+        left: 'left',
+        text: '2021年宠物类型结构'
+      },
+      toolbox: {
+        show: true,
+        feature: {
+          mark: { show: true },
+          dataView: { show: true, readOnly: false },
+          restore: { show: true },
+          saveAsImage: { show: true }
+        }
+      },
+      series: [
+        {
+          name: 'Nightingale Chart',
+          type: 'pie',
+          radius: [50, 200],
+          center: ['50%', '50%'],
+          roseType: 'area',
+          itemStyle: {
+            borderRadius: 8
+          },
+          data: [
+            { value: 65, name: '狗狗' },
+            { value: 56, name: '猫咪' },
+            { value: 50, name: '水族类' },
+            { value: 44, name: '鸟类' },
+            { value: 38, name: '爬行类' },
+            { value: 30, name: '兔子' },
+            { value: 28, name: '啮齿类' },
+            { value: 20, name: '两栖类' }
+          ]
+        }
+      ]
+    };
+    myChart.setOption(option);
+  </script>
+</section>
+<!-- End 第3部分 -->
+
+
+
+</html>

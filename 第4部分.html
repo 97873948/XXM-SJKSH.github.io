@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Meta Tags -->
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+  <!-- Page Title -->
+  <title> 你爱养宠物嘛?</title>
+  <!-- Bundle -->
+  <link rel="stylesheet" href="static/css/bundle.min.css">
+  <!-- Plugin Css -->
+  <link href="static/css/LineIcons.min.css" rel="stylesheet">
+  <link href="static/css/jquery.fancybox.min.css" rel="stylesheet">
+  <link href="static/css/owl.carousel.min.css" rel="stylesheet">
+  <link href="static/css/wow.css" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/cubeportfolio.min.css">
+  <link href="static/css/line-awesome.min.css" rel="stylesheet">
+  <!-- Style Sheet -->
+  <link href="static/css/style.css" rel="stylesheet">
+  <link href="https://wqq-sjksh.github.io/static/css/custom.css" rel="stylesheet">
+  <!-- JavaScript -->
+  <script src="static/js/bundle.min.js"></script>
+  <!-- Plugin Js -->
+  <script src="static/js/jquery.appear.js"></script>
+  <script src="static/js/jquery.fancybox.min.js"></script>
+  <script src="static/js/owl.carousel.min.js"></script>
+  <script src="static/js/wow.min.js"></script>
+  <script src="static/js/jquery.cubeportfolio.min.js"></script>
+  <!-- CUSTOM JS -->
+  <script src="static/js/contact_us.js"></script>
+  <script src="static/js/script.js"></script>
+  <!-- ECHARTS JS -->
+  <script src="static/js/echarts.min.js"></script>
+  <script src="static/js/purple-passion.js"></script>
+  <script src="static/js/vintage.js"></script>
+  <script src="static/js/jquery.js"></script>
+</head>
+<style>
+  body{
+     background-color: rgb(241, 240, 199);
+ }
+</style>
+<!-- Start 头部 -->
+<header>
+  <!--Navigation（导航）-->
+  <nav class="navbar navbar-top-default navbar-expand-lg navbar-simple nav-line">
+    <a href="javascript:void(0)" class="sidemenu_btn" id="sidemenu_toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </a>
+    <div class="container-fluid">
+      <!--Nav Links(导航链接)-->
+      <div class="collapse navbar-collapse " id="megaone">
+        <div class="navbar-nav mr-auto">
+          <a class="nav-link scroll" href="index.html">首页</a>
+          <a class="nav-link scroll" href="第2部分.html">市场规模</a>
+          <a class="nav-link scroll" href="第3部分.html">宠物类型</a>
+          <a class="nav-link scroll" href="">宠物占比</a>
+          <a class="nav-link scroll" href="第5部分.html">养宠人士</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<!-- End 头部 -->
+
+<!-- Start 第4部分 -->
+<section id="第4部分">
+  <h1 style="font-size:20px;font-style:oblique;color:rgb(51, 136, 48);position: absolute;left: 50px;top:70px">
+    宠物类型以犬猫为主，类型多样化 犬系占比达七成，
+    新生代已婚家庭进阶养宠主流人群 泛85后宠物主占比达74% 女性养宠比例更高，宠物主中本科率超过七成，家庭月收入在1.5w以上的宠物主比例达72%
+  </h1>
+  <!-- 准备盒子 -->
+  <div style="display: flex;justify-content: space-around;">
+    <div id="main3" style="width:500px;height:600px;background-color:rgb(230, 230, 230);border-radius: 30px;"></div>
+    <div id="main4" style="width:500px;height:600px;background-color:rgb(230, 230, 230);border-radius: 30px;"></div>
+    <div id="main5" style="width:500px;height:600px;background-color:rgb(230, 230, 230);border-radius: 30px;"></div>
+    <div id="main6" style="width:500px;height:600px;background-color:rgb(230, 230, 230);border-radius: 30px;"></div>
+  </div>
+  <div style="display: flex;justify-content: space-around;margin-top: 50px;">
+    <img style="width: 200px;height:auto" src="./static/image/2.png" alt="">
+    <img style="width: 200px;height:auto" src="./static/image/3.png" alt="">
+    <img style="width: 200px;height:auto" src="./static/image/nEfiua.jpg" alt="">
+    <img style="width: 200px;height:auto" src="./static/image/小羊.png" alt="">
+  </div>
+  <script type="text/javascript">
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('main3'), ('macarons'));
+
+    // 指定图表的配置项和数
+
+    var option = {
+      title: {
+        text: '不同城市各级别类型宠物占比',
+        left: 'center'
+      },
+      tooltip: {
+        trigger: 'item'
+      },
+      legend: {
+        orient: 'vertical',
+        left: 'left'
+      },
+      grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+      },
+      xAxis: {
+        type: 'value'
+      },
+      yAxis: {
+        type: 'category',
+        data: ['Total', '狗狗', '猫咪', '水族类', '爬行类', '鸟类', '兔子',
+          '齿类', '两栖类']
+      },
+      series: [
+        {
+          name: '一线城市',
+          type: 'bar',
+          stack: 'total',
+          label: {
+            show: true
+          },
+          emphasis: {
+            focus: 'series'
+          },
+          data: [28, 28, 32, 33, 37, 31, 32, 38]
+        },
+        {
+          name: '新一线城市',
+          type: 'bar',
+          stack: 'total',
+          label: {
+            show: true
+          },
+          emphasis: {
+            focus: 'series'
+          },
+          data: [28, 27, 28, 22, 22, 26, 25, 26, 18]
+        },
+        {
+          name: '二线城市',
+          type: 'bar',
+          stack: 'total',
+          label: {
+            show: true
+          },
+          emphasis: {
+            focus: 'series'
+          },
+          data: [18, 19, 17, 20, 20, 17, 18, 15, 19]
+        },
+        {
+          name: '三线城市',
+          type: 'bar',
+          stack: 'total',
+          label: {
+            show: true
+          },
+          emphasis: {
+            focus: 'series'
+          },
+          data: [16, 16, 17, 14, 12, 18, 14, 16, 12]
+        },
+        {
+          name: '四线和五线',
+          type: 'bar',
+          stack: 'total',
+          label: {
+            show: true
+          },
+          emphasis: {
+            focus: 'series'
+          },
+          data: [10, 10, 6, 11, 9, 8, 11, 5, 12]
+        }
+      ]
+    };
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+
+    // 狗狗基本属性
+    var chartDom = document.getElementById('main4');
+    var myChart1 = echarts.init(chartDom);
+    var option;
+
+    option = {
+      title: {
+        text: '2021年狗狗的独宠比例'
+      },
+      tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+          type: 'shadow'
+        }
+      },
+      legend: {},
+      grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+      },
+      xAxis: {
+        type: 'value',
+        boundaryGap: [0, 0.01]
+      },
+      yAxis: {
+        type: 'category',
+        data: [
+          '约克夏梗犬',
+          '迷你雪纳瑞',
+          '比熊犬',
+          '吉娃娃',
+          '博美犬',
+          '贵宾犬/泰迪犬',
+          '松狮犬',
+          '中华田园犬',
+          '柴犬',
+          '古代牧羊犬',
+          '苏格兰牧羊犬',
+          '阿拉斯加雪橇犬',
+          '德国牧羊犬',
+          '边境牧羊犬',
+          '秋田犬',
+          '拉布拉多猎犬',
+          '萨摩耶犬',
+          '金毛寻回犬',
+          '哈士奇犬'
+        ]
+      },
+      series: [
+        {
+          name: '2021年',
+          type: 'bar',
+          data: [1, 2, 6, 7, 7, 18, 2, 6, 7, 1, 2, 2, 2, 3, 4, 6, 8, 13, 17]
+        }
+      ]
+    };
+
+    option && myChart.setOption(option);
+
+    // 指定图表的配置项和数
+    // 使用刚指定的配置项和数据显示图表。
+    myChart1.setOption(option);
+
+
+    //爬宠类型
+    var chartDom1 = document.getElementById('main5');
+    var myChart2 = echarts.init(chartDom1);
+    var option;
+
+    option = {
+      xAxis: {
+        type: 'category',
+        data: ['龟类', '蜥蜴类', '节肢类', '蛇类']
+      },
+      yAxis: {
+        type: 'value'
+      },
+      series: [
+        {
+          data: [66, 38, 14, 14],
+          type: 'bar'
+        }
+      ]
+    };
+
+    option && myChart.setOption(option);
+    // 指定图表的配置项和数
+    // 使用刚指定的配置项和数据显示图表。
+    myChart2.setOption(option);
+
+
+
+    //水族类基础属性
+    var myChart3 = echarts.init(document.getElementById('main6'), ('macarons'));
+
+    // 指定图表的配置项和数
+
+    var option = {
+      title: {
+        text: '2021年水族类基本属性',
+        left: 'center'
+      },
+      tooltip: {
+        trigger: 'item'
+      },
+      legend: {
+        orient: 'vertical',
+        left: 'left'
+      },
+
+      xAxis: {
+        type: 'category',
+        data: ['金鱼', '孔雀鱼', '锦鲤', '小丑鱼', '七彩神仙鱼', '罗汉鱼', '鹦鹉鱼']
+      },
+      yAxis: {
+        type: 'value'
+      },
+      series: [
+        {
+          data: [36, 22, 12, 10, 5, 5, 10],
+          type: 'bar'
+        }
+      ]
+    };
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart3.setOption(option);
+
+  </script>
+</section>
+<!-- End 第4部分 -->
+
+
+</html>
